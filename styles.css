@@ -1,0 +1,120 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@500;600;700&display=swap');
+
+:root{
+    --ff-Montserrat: 'Montserrat', sans-serif;
+    --gray: hsl(0, 0%, 90%);
+    --bluelight: hsl(229, 19%, 77%);
+    --grayLight: hsl(0, 0%, 78%);
+    --veryGray: hsl(160, 2%, 31%);
+}
+
+
+*{
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    box-sizing: border-box;
+    font-family: var(--ff-Montserrat);
+    display: grid;
+
+}
+
+/* Estilo el contenedor para main y footer */
+.container{
+    width: 90%;
+    margin: 2rem auto;
+    max-width: 900px;
+    text-align: center;
+}
+
+/* Agrego tamaño para todas las imagenes con la clase img */
+.img{
+    width: 100%;
+    border-radius: 1.1rem;
+}
+
+/* Estilo la imagen principal de usuario */
+
+.picture__img{
+    max-width: 120px;
+}
+
+/* Estilo info de usuario */
+
+.user__info{
+    display: grid;
+    gap: .7rem;
+}
+
+.user__name{
+    font-size: 1.1em;
+    color: var(--veryGray);
+    font-weight: 600;
+}
+
+.user__city{
+    color: var(--grayLight);
+    font-size: .9em;
+}
+
+/* Estilo redes de user */
+
+.user__redes{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: .7rem;
+}
+
+.content{
+    padding: .7rem .8rem;
+    border-radius: .8rem;
+    background-color: var(--gray);
+    width: 70px;
+}
+
+.number{
+    color: var(--veryGray);
+    font-weight: 600;
+    font-size: .9em;
+}
+
+.posts__text{
+    color: var(--grayLight);
+    font-family: 600;
+    font-size: .84em;
+}
+
+/* Estilo grid gallery */
+.grid__gallery{
+    margin: 3rem 0;
+    display: grid; 
+    grid-template-columns: repeat(3, 1fr); 
+    grid-template-rows: repeat(3, 1fr); 
+    gap: 1rem; 
+}
+
+.item__one { grid-area: 1 / 1 / 2 / 2; }
+.item__two { grid-area: 1 / 2 / 2 / 4; }
+.item__three { grid-area: 2 / 1 / 3 / 3; }
+.item__for { grid-area: 2 / 3 / 4 / 4; }
+.item__five { grid-area: 3 / 2 / 4 / 3; }
+.item__six { grid-area: 3 / 1 / 4 / 2; }
+
+
+.footer{
+    text-align: center;
+    color: var(--grayLight);
+}
+
+.copy a{
+    color: var(--grayLight);
+}
+
+@media (min-width: 48rem){
+    .picture__img{
+        margin-top: 1.3rem;
+    }
+}
